@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -31,13 +34,13 @@ function Footer() {
           <div className="footer-column">
             <h3 className="footer-heading">Quick Navigation</h3>
             <nav className="footer-nav">
-              <Link to="/" className="footer-link">Home</Link>
-              <Link to="/vision" className="footer-link">Vision</Link>
-              <Link to="/who-we-are" className="footer-link">Who We Are</Link>
-              <Link to="/what-we-export" className="footer-link">What We Export</Link>
-              <Link to="/operational-model" className="footer-link">Operational Model</Link>
-              <Link to="/market-intelligence" className="footer-link">Market Intelligence</Link>
-              <Link to="/contact" className="footer-link">Contact Us</Link>
+              <Link to="/" className="footer-link" onClick={scrollToTop}>Home</Link>
+              <Link to="/vision" className="footer-link" onClick={scrollToTop}>Vision</Link>
+              <Link to="/who-we-are" className="footer-link" onClick={scrollToTop}>Who We Are</Link>
+              <Link to="/what-we-export" className="footer-link" onClick={scrollToTop}>What We Export</Link>
+              <Link to="/operational-model" className="footer-link" onClick={scrollToTop}>Operational Model</Link>
+              <Link to="/market-intelligence" className="footer-link" onClick={scrollToTop}>Market Intelligence</Link>
+              <Link to="/contact" className="footer-link" onClick={scrollToTop}>Contact Us</Link>
             </nav>
           </div>
 

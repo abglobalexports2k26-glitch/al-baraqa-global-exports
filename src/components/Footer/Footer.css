@@ -1,15 +1,32 @@
 .footer {
-  background-color: var(--bg-secondary);
+  background: linear-gradient(to bottom, var(--bg-secondary) 0%, rgba(0, 20, 40, 0.98) 100%);
   color: var(--text-primary);
-  padding: 4rem 0 2rem;
+  padding: 5rem 0 2rem;
   margin-top: 4rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(22, 78, 99, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(22, 78, 99, 0.15) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -29,7 +46,20 @@
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), transparent);
+  border-radius: 2px;
 }
 
 .footer-description {
@@ -52,15 +82,19 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: var(--hover-overlay);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .social-link:hover {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(22, 78, 99, 0.4);
+  border-color: var(--primary-color);
 }
 
 /* Navigation Links */
@@ -73,12 +107,29 @@
 .footer-link {
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.footer-link::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
 }
 
 .footer-link:hover {
   color: var(--primary-color);
+  padding-left: 1.25rem;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  left: 0;
 }
 
 /* Team Members */
@@ -88,32 +139,55 @@
 }
 
 .team-member {
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-.team-member:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.team-member:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(22, 78, 99, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .team-member h4 {
   color: var(--text-primary);
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.team-member h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary-color), transparent);
+  border-radius: 2px;
 }
 
 .team-role {
   color: var(--primary-color);
   font-size: 0.85rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .team-bio {
   color: var(--text-tertiary);
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Contact Info */
@@ -129,12 +203,25 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
 }
 
 .contact-item svg {
   flex-shrink: 0;
   margin-top: 0.125rem;
   color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover svg {
+  transform: scale(1.1);
 }
 
 /* Footer CTA */
@@ -142,21 +229,39 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
   color: white;
   text-decoration: none;
-  border-radius: 0.375rem;
-  font-weight: 500;
+  border-radius: 0.5rem;
+  font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
-  margin-top: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(22, 78, 99, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.footer-cta:hover::before {
+  left: 100%;
 }
 
 .footer-cta:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px var(--focus-ring);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(22, 78, 99, 0.5);
 }
 
 /* Footer Bottom */
@@ -164,8 +269,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
   color: var(--text-tertiary);
 }
@@ -179,11 +285,27 @@
 .legal-link {
   color: var(--text-tertiary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.legal-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
 }
 
 .legal-link:hover {
   color: var(--primary-color);
+}
+
+.legal-link:hover::after {
+  width: 100%;
 }
 
 /* Responsive */

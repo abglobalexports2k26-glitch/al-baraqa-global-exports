@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './Navigation.css'
 
@@ -15,6 +15,10 @@ function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const products = [
     { name: 'Product 1', path: '/products/product-1' },
     { name: 'Product 2', path: '/products/product-2' },
@@ -26,7 +30,7 @@ function Navigation() {
       <div className="header-container">
         <div className="header-content">
           {/* Logo */}
-          <Link to="/" className="logo-link">
+          <Link to="/" className="logo-link" onClick={scrollToTop}>
             <div className="logo-circle">
               <span className="logo-text">AB</span>
             </div>
@@ -35,9 +39,9 @@ function Navigation() {
 
           {/* Desktop Navigation */}
           <nav className="desktop-nav">
-            <Link to="/" className="nav-link active">Home</Link>
-            <Link to="/vision" className="nav-link">Vision</Link>
-            <Link to="/who-we-are" className="nav-link">Who We Are</Link>
+            <NavLink to="/" className="nav-link" end onClick={scrollToTop}>Home</NavLink>
+            <NavLink to="/vision" className="nav-link" onClick={scrollToTop}>Vision</NavLink>
+            <NavLink to="/who-we-are" className="nav-link" onClick={scrollToTop}>Who We Are</NavLink>
             
             {/* Products Dropdown */}
             <div className="dropdown">
@@ -66,9 +70,9 @@ function Navigation() {
               )}
             </div>
 
-            <Link to="/operational-model" className="nav-link">Operational Model</Link>
-            <Link to="/market-intelligence" className="nav-link">Market Intelligence</Link>
-            <Link to="/contact" className="nav-link">Contact Us</Link>
+            <NavLink to="/operational-model" className="nav-link" onClick={scrollToTop}>Operational Model</NavLink>
+            <NavLink to="/market-intelligence" className="nav-link" onClick={scrollToTop}>Market Intelligence</NavLink>
+            <NavLink to="/contact" className="nav-link" onClick={scrollToTop}>Contact Us</NavLink>
           </nav>
 
           {/* Desktop CTA Button */}
@@ -102,9 +106,9 @@ function Navigation() {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="mobile-nav">
-          <Link to="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link to="/vision" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Vision</Link>
-          <Link to="/who-we-are" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Who We Are</Link>
+          <NavLink to="/" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }} end>Home</NavLink>
+          <NavLink to="/vision" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Vision</NavLink>
+          <NavLink to="/who-we-are" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Who We Are</NavLink>
           <div className="mobile-dropdown">
             <span className="mobile-nav-link">What We Export</span>
             <div className="mobile-dropdown-items">
@@ -120,10 +124,10 @@ function Navigation() {
               ))}
             </div>
           </div>
-          <Link to="/operational-model" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Operational Model</Link>
-          <Link to="/market-intelligence" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Market Intelligence</Link>
-          <Link to="/contact" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
-          <Link to="/contact" className="mobile-cta-button" onClick={() => setIsMobileMenuOpen(false)}>
+          <NavLink to="/operational-model" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Operational Model</NavLink>
+          <NavLink to="/market-intelligence" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Market Intelligence</NavLink>
+          <NavLink to="/contact" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Contact Us</NavLink>
+          <Link to="/contact" className="mobile-cta-button" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>
             Get Quote
           </Link>
         </div>

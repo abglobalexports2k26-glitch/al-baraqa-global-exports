@@ -40,9 +40,9 @@ function Banner() {
           </div>
         </div>
 
-        <div className="banner-tags" data-aos="fade-up" data-aos-delay="100">
+        <div className="banner-tags banner-tags-animate">
           {tags.map((tag, index) => (
-            <span key={index} className="tag" data-aos="zoom-in" data-aos-delay={300 + (index * 10)}>
+            <span key={index} className="tag tag-animate" style={{ animationDelay: `${0.7 + (index * 0.1)}s` }}>
               {tag}
             </span>
           ))}
