@@ -1,0 +1,122 @@
+:root {
+  /* Brand Colors */
+  --primary-color: #4d6e80;
+  --primary-hover: #3e5d70;
+  --primary-light: #5d7e90;
+  --accent-color: #6a8ca0;
+  
+  /* Background Colors - Light Mode (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafb;
+  --bg-tertiary: #f0f4f7;
+  --card-bg: #ffffff;
+  --section-bg-light: rgba(77, 110, 128, 0.03);
+  --section-bg-medium: rgba(77, 110, 128, 0.06);
+  
+  /* Text Colors - Light Mode (Default) */
+  --text-primary: #1a2a35;
+  --text-secondary: #4a5d6b;
+  --text-tertiary: #6b7d8a;
+  --text-muted: #8a9aa5;
+  
+  /* Border Colors */
+  --border-color: rgba(77, 110, 128, 0.15);
+  --border-subtle: rgba(77, 110, 128, 0.08);
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 2px 8px rgba(77, 110, 128, 0.08);
+  --shadow-md: 0 4px 16px rgba(77, 110, 128, 0.12);
+  --shadow-lg: 0 8px 24px rgba(77, 110, 128, 0.16);
+  
+  /* Interactive States */
+  --hover-overlay: rgba(77, 110, 128, 0.04);
+  --focus-ring: rgba(77, 110, 128, 0.3);
+  
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--hover-overlay);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background Colors - Dark Mode */
+    --bg-primary: #1a1f26;
+    --bg-secondary: #212831;
+    --bg-tertiary: #2a3340;
+    --card-bg: #242b35;
+    --section-bg-light: rgba(77, 110, 128, 0.08);
+    --section-bg-medium: rgba(77, 110, 128, 0.12);
+    
+    /* Text Colors - Dark Mode */
+    --text-primary: #e8ecef;
+    --text-secondary: #b8c5d0;
+    --text-tertiary: #8a9aa5;
+    --text-muted: #6b7d8a;
+    
+    /* Border Colors - Dark Mode */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    
+    /* Shadow Colors - Dark Mode */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    
+    /* Interactive States - Dark Mode */
+    --hover-overlay: rgba(255, 255, 255, 0.05);
+  }
+}

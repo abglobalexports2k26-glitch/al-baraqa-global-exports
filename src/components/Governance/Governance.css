@@ -1,0 +1,71 @@
+.governance {
+  padding: 5rem 0;
+}
+
+.governance-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.governance-icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(77, 110, 128, 0.3);
+}
+
+.governance h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.governance h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 2rem;
+}
+
+.governance p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .governance {
+    padding: 3rem 1rem;
+  }
+
+  .governance h2 {
+    font-size: 2rem;
+  }
+
+  .governance h3 {
+    font-size: 1.25rem;
+  }
+
+  .governance p {
+    font-size: 1rem;
+  }
+
+  .governance-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .governance-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+}
