@@ -6,14 +6,15 @@
   right: 0;
   z-index: 50;
   transition: all 0.3s ease;
-  background-color: transparent;
+  background: linear-gradient(135deg, #0b2c4d 0%, #0f4c5c 100%);
+  box-shadow: 0 2px 8px rgba(11, 44, 77, 0.2);
 }
 
 .header.scrolled {
-  background-color: var(--bg-primary);
+  background: linear-gradient(135deg, #0b2c4d 0%, #071a2e 100%);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-md);
-  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 16px rgba(11, 44, 77, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-container {
@@ -79,7 +80,7 @@
 .brand-name {
   font-size: 1.25rem;
   font-weight: bold;
-  color: var(--text-primary);
+  color: #ffffff;
   line-height: 1.2;
   letter-spacing: 0.5px;
 }
@@ -133,7 +134,7 @@
 .nav-link {
   font-weight: 500;
   transition: color 0.2s ease;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   background: none;
   border: none;
@@ -147,7 +148,8 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary-color);
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* Dropdown */
@@ -238,7 +240,7 @@
   width: 2.5rem;
   background: none;
   border: none;
-  color: var(--text-primary);
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -247,7 +249,7 @@
 }
 
 .menu-button:hover {
-  background-color: var(--hover-overlay);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
 }
 
@@ -270,8 +272,8 @@
 /* Mobile Navigation */
 .mobile-nav {
   display: block;
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #0b2c4d 0%, #071a2e 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem;
   animation: slideDown 0.3s ease-out;
   overflow: hidden;
@@ -293,7 +295,7 @@
 .mobile-nav-link {
   display: block;
   padding: 0.75rem 1rem;
-  color: var(--text-primary);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -322,8 +324,8 @@
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  background-color: var(--hover-overlay);
-  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .mobile-dropdown {
