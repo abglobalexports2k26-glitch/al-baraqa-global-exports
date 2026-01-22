@@ -1,12 +1,46 @@
 .vision-page {
   min-height: 100vh;
+  .container {
+    padding: 0;
+    min-height: auto;
+  }
 }
 
 /* Hero Section */
 .vision-hero {
+  position: relative;
   padding: 2rem;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background: linear-gradient(135deg, #0b2c4d 0%, #0f4c5c 100%);
   color: white;
+}
+
+.vision-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.vision-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+.vision-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .vision-title {
@@ -40,9 +74,11 @@
   color: #d0e7f0;
 }
 
+
 /* Common Section Styles */
 .vision-section {
   padding: 5rem 1rem;
+  position: relative;
 }
 
 .vision-section:nth-child(even) {
@@ -146,14 +182,38 @@
 
 /* Finance & Engineering Section */
 .finance-engineering-section {
+  position: relative;
   background: linear-gradient(to bottom, #f8fafc 0%, #e0f2fe 100%);
+  overflow: hidden;
+}
+
+.finance-section-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.section-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.finance-engineering-section .container {
+  position: relative;
+  z-index: 1;
+
 }
 
 .dual-pillars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
-  margin: 3rem 0;
+  margin: 3rem 1rem;
 }
 
 .pillar {
@@ -227,8 +287,24 @@
 
 /* Trusted Gateway Section */
 .trusted-gateway-section {
+  position: relative;
   background: linear-gradient(135deg, #0b2c4d 0%, #0f4c5c 100%);
   color: white;
+  overflow: hidden;
+}
+
+.trusted-gateway-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.trusted-gateway-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .trusted-gateway-section .section-header h2 {

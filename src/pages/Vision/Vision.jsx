@@ -5,6 +5,14 @@ function Vision() {
     <div className="vision-page">
       {/* Hero Section */}
       <section className="vision-hero">
+        <div className="vision-hero-background">
+          <img 
+            src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&h=800&fit=crop&q=80" 
+            alt="Global Shipping and Logistics"
+            className="vision-hero-image"
+          />
+        </div>
+        <div className="vision-hero-content">
           <h1 className="vision-title">Our Vision</h1>
           <p className="vision-lead">
             We envision building a globally respected export enterprise from India that is driven not by trading instincts alone, 
@@ -19,10 +27,12 @@ function Vision() {
             Rather than focusing solely on volumes or transactions, we aim to build an export house where every shipment, contract, 
             and customer relationship is managed through well-defined processes, clear accountability, and disciplined execution.
           </p>
+        </div>
       </section>
 
       {/* Professionally Governed Platform */}
       <section className="vision-section governance-section">
+        <div className="container">
           <div className="section-header">
             <h2>Building a Professionally Governed Export Platform</h2>
           </div>
@@ -88,10 +98,12 @@ function Vision() {
             Our objective is to provide international buyers with a level of documentation clarity, reporting discipline, 
             and commercial transparency that supports long-term partnerships and confident decision-making.
           </p>
+        </div>
       </section>
 
       {/* Finance Meets Supply Chain */}
       <section className="vision-section finance-engineering-section">
+        <div className="container">
           <div className="section-header">
             <h2>Where Finance Meets Supply Chain Engineering</h2>
           </div>
@@ -137,10 +149,19 @@ function Vision() {
             Our vision is to unify these disciplines so that exports are not only executed on time, but are also financially sound, 
             technically controlled, and operationally predictable.
           </p>
+        </div>
       </section>
 
       {/* Trusted Gateway */}
       <section className="vision-section trusted-gateway-section">
+        <div className="trusted-gateway-background">
+          <img 
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&h=600&fit=crop&q=80" 
+            alt="Global Business Partnership"
+            className="section-background-image"
+          />
+        </div>
+        <div className="container">
           <div className="section-header">
             <h2>A Trusted Gateway for Global Buyers</h2>
           </div>
@@ -150,20 +171,21 @@ function Vision() {
           </p>
           <div className="gateway-commitment">
             <p>
-              Our vision is to be an Indian export partner that global buyers can engage with confidence — knowing they are working 
+              Our vision is to be an Indian export partner that global buyers can engage with confidence knowing they are working 
               with a professionally managed, compliance-focused, and governance-driven organization built for long-term collaboration.
             </p>
           </div>
-        
+        </div>
       </section>
 
       {/* Empowering Producers */}
       <section className="vision-section producers-section">
+        <div className="container">
           <div className="section-header">
             <h2>Empowering Indian Producers Through Structure</h2>
           </div>
           <p className="section-intro">
-            We also envision transforming how Indian producers access global markets — not through ad-hoc transactions, 
+            We also envision transforming how Indian producers access global markets not through ad-hoc transactions, 
             but through structured export programs supported by:
           </p>
           <div className="producers-grid">
@@ -213,23 +235,25 @@ function Vision() {
             By providing this professional framework, we enable manufacturers and farmers to focus on production excellence, 
             while we manage global market access with disciplined oversight and operational control.
           </p>
-        
+        </div>
       </section>
 
       {/* Long-Term Vision */}
       <section className="vision-section long-term-vision">
+        <div className="container">
           <div className="section-header">
             <h2>Our Long-Term Vision</h2>
           </div>
           <div className="vision-statement">
             <p className="statement-primary">
-              To become one of India's most professionally governed and globally trusted export houses — where finance, 
+              To become one of India's most professionally governed and globally trusted export houses where finance, 
               engineering, and compliance shape every shipment.
             </p>
             <p className="statement-secondary">
               A company recognized not for shipment volumes, but for the precision, transparency, and reliability of its operations.
             </p>
           </div>
+        </div>
       </section>
     </div>
   )

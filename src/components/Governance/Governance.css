@@ -1,5 +1,34 @@
 .governance {
-  padding: 5rem 0;
+  position: relative;
+  padding: 6rem 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.governance-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.governance-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.governance-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+  padding: 4rem 2rem;
 }
 
 .governance-content {
@@ -18,7 +47,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 8px 24px rgba(77, 110, 128, 0.3);
+  box-shadow: 0 8px 24px rgba(11, 44, 77, 0.3);
 }
 
 .governance h2 {
@@ -44,7 +73,12 @@
 
 @media (max-width: 768px) {
   .governance {
-    padding: 3rem 1rem;
+    padding: 4rem 0;
+    min-height: 400px;
+  }
+
+  .governance-overlay {
+    padding: 3rem 1.5rem;
   }
 
   .governance h2 {

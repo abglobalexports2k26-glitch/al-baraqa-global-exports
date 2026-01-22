@@ -2,7 +2,6 @@
   background: linear-gradient(to bottom, #0b2c4d 0%, #071a2e 100%);
   color: #ffffff;
   padding: 5rem 0 2rem;
-  margin-top: 4rem;
   border-top: 3px solid var(--primary-color);
   position: relative;
   overflow: hidden;
@@ -338,7 +337,6 @@
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 0 1.5rem;
-    margin-top: 3rem;
   }
 
   .footer-container {
