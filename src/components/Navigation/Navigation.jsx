@@ -41,7 +41,7 @@ function Navigation() {
           <nav className="desktop-nav">
             <NavLink to="/" className="nav-link" end onClick={scrollToTop}>Home</NavLink>
             <NavLink to="/vision" className="nav-link" onClick={scrollToTop}>Vision</NavLink>
-            <NavLink to="/who-we-are" className="nav-link" onClick={scrollToTop}>Who We Are</NavLink>
+            <NavLink to="/our-team" className="nav-link" onClick={scrollToTop}>Our Team</NavLink>
             
             {/* Products Dropdown */}
             <div className="dropdown">
@@ -115,7 +115,7 @@ function Navigation() {
         <div className="mobile-nav">
           <NavLink to="/" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }} end>Home</NavLink>
           <NavLink to="/vision" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Vision</NavLink>
-          <NavLink to="/who-we-are" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Who We Are</NavLink>
+          <NavLink to="/our-team" className="mobile-nav-link" onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }}>Our Team</NavLink>
           <div className="mobile-dropdown">
             <span className="mobile-nav-link">What We Export</span>
             <div className="mobile-dropdown-items">

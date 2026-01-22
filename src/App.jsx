@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vision" element={<Vision />} />
-          <Route path="/who-we-are" element={<WhoWeAre />} />
+          <Route path="/our-team" element={<WhoWeAre />} />
           <Route path="/what-we-export" element={<WhatWeExport />} />
           <Route path="/operational-model" element={<OperationalModel />} />
           <Route path="/market-intelligence" element={<MarketIntelligence />} />

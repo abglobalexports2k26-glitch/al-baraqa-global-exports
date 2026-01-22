@@ -36,7 +36,7 @@ function Footer() {
             <nav className="footer-nav">
               <Link to="/" className="footer-link" onClick={scrollToTop}>Home</Link>
               <Link to="/vision" className="footer-link" onClick={scrollToTop}>Vision</Link>
-              <Link to="/who-we-are" className="footer-link" onClick={scrollToTop}>Who We Are</Link>
+              <Link to="/our-team" className="footer-link" onClick={scrollToTop}>Our Team</Link>
               <Link to="/what-we-export" className="footer-link" onClick={scrollToTop}>What We Export</Link>
               <Link to="/operational-model" className="footer-link" onClick={scrollToTop}>Operational Model</Link>
               <Link to="/market-intelligence" className="footer-link" onClick={scrollToTop}>Market Intelligence</Link>
