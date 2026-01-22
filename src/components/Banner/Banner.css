@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 4rem);
   overflow: hidden;
 }
 
@@ -144,7 +144,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .banner {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 4rem);
   }
 
   .banner-overlay {
