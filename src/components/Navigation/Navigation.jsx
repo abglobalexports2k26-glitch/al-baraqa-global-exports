@@ -1,6 +1,8 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './Navigation.css'
+import falconLogo from '../../assets/images/only_falcon_logo.png'
+import brandName from '../../assets/images/brand_name.png'
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -31,10 +33,8 @@ function Navigation() {
         <div className="header-content">
           {/* Logo */}
           <Link to="/" className="logo-link" onClick={scrollToTop}>
-            <div className="logo-circle">
-              <span className="logo-text">AB</span>
-            </div>
-            <span className="brand-name">Al Baraqah Global Exports</span>
+            <img src={falconLogo} alt="Al Baraqah Global Exports Logo" className="logo-image" />
+            <img src={brandName} alt="Al Baraqah Global Exports" className="brand-name-image" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,10 +42,10 @@ function Navigation() {
             <NavLink to="/" className="nav-link" end onClick={scrollToTop}>Home</NavLink>
             <NavLink to="/vision" className="nav-link" onClick={scrollToTop}>Vision</NavLink>
             <NavLink to="/our-team" className="nav-link" onClick={scrollToTop}>Our Team</NavLink>
-            
+
             {/* Products Dropdown */}
             <div className="dropdown">
-              <button 
+              <button
                 className="nav-link dropdown-toggle"
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
               >
@@ -57,9 +57,9 @@ function Navigation() {
               {isProductsOpen && (
                 <div className="dropdown-menu">
                   {products.map((product) => (
-                    <Link 
-                      key={product.path} 
-                      to={product.path} 
+                    <Link
+                      key={product.path}
+                      to={product.path}
                       className="dropdown-item"
                       onClick={() => setIsProductsOpen(false)}
                     >
@@ -88,7 +88,7 @@ function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="mobile-menu-toggle">
-            <button 
+            <button
               className="menu-button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -120,9 +120,9 @@ function Navigation() {
             <span className="mobile-nav-link">What We Export</span>
             <div className="mobile-dropdown-items">
               {products.map((product) => (
-                <Link 
-                  key={product.path} 
-                  to={product.path} 
+                <Link
+                  key={product.path}
+                  to={product.path}
                   className="mobile-dropdown-item"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
