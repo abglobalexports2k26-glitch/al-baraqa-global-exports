@@ -1,10 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ['porticoed-fortyish-elanor.ngrok-free.dev']
+    host: true,
+    port: 1143,
+    allowedHosts: ['.ngrok-free.dev'],
+    hmr: {
+      clientPort: 443
+    }
   }
 })
+

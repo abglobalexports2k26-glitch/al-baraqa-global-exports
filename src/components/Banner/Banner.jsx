@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Banner.css'
+import logisticsBg from '../../assets/images/global_bg.jpeg'
 
 function Banner() {
   const tags = [
@@ -14,8 +15,8 @@ function Banner() {
     <section className="banner">
       <div className="banner-background">
         <div className="banner-image-placeholder">
-          <img 
-            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1920&h=1080&fit=crop&q=80" 
+          <img
+            src={logisticsBg}
             alt="Global Trade Network"
             className="banner-background-image"
           />
@@ -24,12 +25,12 @@ function Banner() {
 
       <div className="banner-overlay">
         <div className="banner-content">
-          <h1 data-aos="fade-down" data-aos-duration="1000">A Professionally Governed Export Platform from India</h1>
+          <h1 data-aos="fade-down" data-aos-duration="1000">A Professionally Governed Export Business - Redefining How India Exports to the World</h1>
           <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            We execute international trade with a strong focus on compliance, 
+            We execute international trade with a strong focus on compliance,
             documentation accuracy, financial discipline, and risk-aware execution.
           </h3>
-          
+
           <div className="banner-buttons" data-aos="fade-up" data-aos-delay="400">
             <Link to="/contact" className="btn-primary">
               Initiate Trade Discussions
