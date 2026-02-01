@@ -1,6 +1,6 @@
 .cta-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  background: linear-gradient(135deg, #5c4a11 0%, #8b7319 100%);
   position: relative;
   overflow: hidden;
 }
@@ -48,7 +48,7 @@
   gap: 0.75rem;
   padding: 1.25rem 3rem;
   background-color: white;
-  color: var(--primary-color);
+  color: #8b7319;
   font-size: 1.15rem;
   font-weight: 700;
   text-decoration: none;

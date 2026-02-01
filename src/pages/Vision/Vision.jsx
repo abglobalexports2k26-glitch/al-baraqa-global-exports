@@ -19,13 +19,29 @@ function Vision() {
             but by professional governance, financial discipline, engineering precision, and international compliance.
           </p>
           <p className="vision-intro">
-            Our company is led by Chartered Accountants and Engineers, bringing together commercial intelligence with operational rigour. 
+            <b>Our company is led by Chartered Accountants and Engineers</b>, bringing together commercial intelligence with operational rigour. 
             Our vision is to design an export organization where global trade is executed with the same level of structure, transparency, 
             and analytical discipline that international buyers expect from professionally governed institutions.
           </p>
           <p className="vision-intro">
             Rather than focusing solely on volumes or transactions, we aim to build an export house where every shipment, contract, 
             and customer relationship is managed through well-defined processes, clear accountability, and disciplined execution.
+          </p>
+        </div>
+      </section>
+
+      {/* Long-Term Vision */}
+      <section className="vision-section long-term-vision">
+        <div className="section-header">
+          <h2>Our Long-Term Vision</h2>
+        </div>
+        <div className="vision-statement">
+          <p className="statement-primary">
+            To become one of India's most professionally governed and globally trusted export houses where finance,
+            engineering, and compliance shape every shipment.
+          </p>
+          <p className="statement-secondary">
+            A company recognized not for shipment volumes, but for the precision, transparency, and reliability of its operations.
           </p>
         </div>
       </section>
@@ -159,7 +175,7 @@ function Vision() {
         </div>
         <div className="container">
           <div className="section-header">
-            <h2>A Trusted Gateway for Global Buyers</h2>
+            <h2>To Build A Trusted Gateway for Global Buyers</h2>
           </div>
           <p className="gateway-intro">
             Today's international buyers demand more than products. They expect audit-ready records, compliant contracts, 
@@ -231,22 +247,6 @@ function Vision() {
           while we manage global market access with disciplined oversight and operational control.
         </p>
 
-      </section>
-
-      {/* Long-Term Vision */}
-      <section className="vision-section long-term-vision">
-        <div className="section-header">
-          <h2>Our Long-Term Vision</h2>
-        </div>
-        <div className="vision-statement">
-          <p className="statement-primary">
-            To become one of India's most professionally governed and globally trusted export houses where finance,
-            engineering, and compliance shape every shipment.
-          </p>
-          <p className="statement-secondary">
-            A company recognized not for shipment volumes, but for the precision, transparency, and reliability of its operations.
-          </p>
-        </div>
       </section>
     </div>
   )

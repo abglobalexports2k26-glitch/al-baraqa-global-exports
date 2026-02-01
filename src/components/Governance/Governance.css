@@ -21,7 +21,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
-  filter: brightness(0.8);
+  filter: brightness(0.4);
 }
 
 .governance-overlay {
@@ -41,33 +41,33 @@
   width: 5rem;
   height: 5rem;
   margin: 0 auto 2rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 8px 24px rgba(11, 44, 77, 0.3);
+  box-shadow: 0 8px 24px rgba(201, 162, 39, 0.3);
 }
 
 .governance h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--bg-primary) !important;
   margin: 0 0 1rem;
 }
 
 .governance h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #ddb93d;
   margin: 0 0 2rem;
 }
 
 .governance p {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: white;
   margin-bottom: 1.5rem;
 }
 

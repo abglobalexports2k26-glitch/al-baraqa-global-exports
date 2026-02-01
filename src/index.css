@@ -1,46 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Brand Colors - New Theme */
-  --primary-color: #0b2c4d;
-  --primary-hover: #0f4c5c;
-  --primary-light: #164a63;
-  --accent-color: #0f4c5c;
-  --accent-light: #1a6b7f;
+  /* Brand Colors - Golden & Green Theme */
+  --primary-color: #1a5f3c;
+  --primary-hover: #238551;
+  --primary-light: #2d9d5f;
+  --accent-color: #c9a227;
+  --accent-light: #ddb93d;
   
   /* Supporting Colors */
   --gray-primary: #6b7280;
   --gray-light: #9ca3af;
   --gray-dark: #4b5563;
-  --teal: #0f4c5c;
+  --gold: #c9a227;
+  --gold-light: #e6c54d;
+  --gold-dark: #a68519;
+  --emerald: #1a5f3c;
   --dark: #111111;
   
   /* Background Colors - Light Mode (Default) */
   --bg-primary: #ffffff;
-  --bg-secondary: #f0f5f9;
-  --bg-tertiary: #e1ecf4;
+  --bg-secondary: #f5f9f6;
+  --bg-tertiary: #e8f2eb;
   --card-bg: #ffffff;
-  --section-bg-light: rgba(11, 44, 77, 0.03);
-  --section-bg-medium: rgba(11, 44, 77, 0.08);
+  --section-bg-light: rgba(26, 95, 60, 0.03);
+  --section-bg-medium: rgba(26, 95, 60, 0.08);
   
   /* Text Colors - Light Mode (Default) */
   --text-primary: #111111;
   --text-secondary: #374151;
   --text-tertiary: #6b7280;
   --text-muted: #9ca3af;
+  --heading-color: #b8941f;
   
   /* Border Colors */
-  --border-color: rgba(11, 44, 77, 0.12);
-  --border-subtle: rgba(11, 44, 77, 0.06);
+  --border-color: rgba(26, 95, 60, 0.15);
+  --border-subtle: rgba(26, 95, 60, 0.08);
   
   /* Shadow Colors */
-  --shadow-sm: 0 2px 8px rgba(11, 44, 77, 0.08);
-  --shadow-md: 0 4px 16px rgba(11, 44, 77, 0.12);
-  --shadow-lg: 0 8px 24px rgba(11, 44, 77, 0.16);
+  --shadow-sm: 0 2px 8px rgba(26, 95, 60, 0.08);
+  --shadow-md: 0 4px 16px rgba(26, 95, 60, 0.12);
+  --shadow-lg: 0 8px 24px rgba(26, 95, 60, 0.16);
   
   /* Interactive States */
-  --hover-overlay: rgba(11, 44, 77, 0.04);
-  --focus-ring: rgba(15, 76, 92, 0.3);
+  --hover-overlay: rgba(26, 95, 60, 0.04);
+  --focus-ring: rgba(201, 162, 39, 0.4);
   
   /* Note: Aptos Narrow is a Windows system font, using Inter as fallback for web */
   font-family: 'Aptos Narrow', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -72,10 +76,13 @@ a:hover {
   color: var(--primary-hover);
 }
 
+h1, h2 {
+  color: var(--heading-color) !important;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: var(--text-primary);
 }
 
 button {

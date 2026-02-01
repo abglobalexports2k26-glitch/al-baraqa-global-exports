@@ -39,7 +39,7 @@ function WhoWeAre() {
               <line x1="8" y1="18" x2="16" y2="18"></line>
             </svg>
           </div>
-          <h4>CA Brain</h4>
+          <h4>Chartered Accountant Brain</h4>
           <p>Strategic Financial Leadership</p>
         </div>
         <div className="stat-item">
@@ -51,7 +51,7 @@ function WhoWeAre() {
           <h4>Engineer Execution</h4>
           <p>Technical Implementation</p>
         </div>
-        <div className="stat-item">
+        {/* <div className="stat-item">
           <div className="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -59,7 +59,7 @@ function WhoWeAre() {
           </div>
           <h4>IEC Registered</h4>
           <p>Licensed Export Entity</p>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -5,8 +5,8 @@ import logisticsBg from '../../assets/images/global_bg.jpeg'
 function Banner() {
   const tags = [
     'Chartered Accountant–Led Governance',
+    'Engineers-Led Execution',
     'IEC Registered Export Entity',
-    'LC/TT Advance Payment Support',
     'Export Documentation Accuracy',
     'Compliance Driven Trade Execution'
   ]
