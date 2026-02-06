@@ -200,6 +200,20 @@
   line-height: 1.6;
 }
 
+/* Tooltip for heading link - specific position adjustment */
+.footer-heading-link.tooltip-wrapper .custom-tooltip {
+  bottom: auto;
+  top: 100%;
+  transform: translateX(-50%) translateY(8px);
+}
+
+.footer-heading-link.tooltip-wrapper .custom-tooltip::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #16213e;
+}
+
 /* Contact Info */
 .contact-info-footer {
   display: flex;

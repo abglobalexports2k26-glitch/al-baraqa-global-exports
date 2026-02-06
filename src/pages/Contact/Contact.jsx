@@ -1,13 +1,27 @@
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './Contact.css'
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 50,
+      anchorPlacement: 'top-bottom'
+    })
+  }, [])
+
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
-      
+
       <div className="contact-content">
         {/* Contact Details */}
-        <div className="contact-details">
+        <div className="contact-details" data-aos="fade-right" data-aos-delay="200">
           <h2>Get in Touch</h2>
           <div className="contact-info">
             <div className="info-item">
@@ -30,34 +44,34 @@ function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="contact-form">
+        <div className="contact-form" data-aos="fade-left" data-aos-delay="200">
           <h2>Send Us a Message</h2>
           <form>
             <div className="form-group">
               <label htmlFor="name">Full Name *</label>
               <input type="text" id="name" name="name" required />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="company">Company Name *</label>
               <input type="text" id="company" name="company" required />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="email">Email Address *</label>
               <input type="email" id="email" name="email" required />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
               <input type="tel" id="phone" name="phone" />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="country">Country *</label>
               <input type="text" id="country" name="country" required />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="product">Product Interest</label>
               <select id="product" name="product">
@@ -67,12 +81,12 @@ function Contact() {
                 <option value="category3">Product Category 3</option>
               </select>
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="message">Message *</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            
+
             <button type="submit" className="submit-button">
               Send Message
             </button>

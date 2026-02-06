@@ -12,29 +12,31 @@ import './Home.css'
 function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 50,
+      anchorPlacement: 'top-bottom'
     })
   }, [])
 
   return (
     <div className="home-page">
       <Banner />
-      <div data-aos="fade-up">
+      <div>
         <WhoWeAre />
       </div>
-      <div data-aos="fade-up">
+      <div>
         <Differentiators />
       </div>
-      <div data-aos="fade-up">
+      <div>
         <WhatWeExecute />
       </div>
-      <div data-aos="fade-up">
+      <div>
         <Governance />
       </div>
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div data-aos-delay="100">
         <CTASection />
       </div>
     </div>

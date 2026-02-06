@@ -1,10 +1,17 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
   const location = useLocation()
+  const navigate = useNavigate()
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const navigateToTeamMember = (memberId) => {
+    // Navigate to team page with scrollTo state, avoiding hash-based scroll issues
+    navigate('/our-team', { state: { scrollTo: memberId } })
   }
   return (
     <footer className="footer">
@@ -82,30 +89,30 @@ function Footer() {
           <div>
             {/* Column 3: Our Team */}
             <div className="footer-column">
-              <Link to="/our-team" className="footer-heading-link" onClick={scrollToTop}>
+              <Link to="/our-team" className="footer-heading-link" onClick={scrollToTop} title="Click to see team strengths & expertise">
                 <h3 className="footer-heading">Our Team</h3>
               </Link>
               <div className="team-members">
-                <Link to="/our-team#founder-ceo" className="team-member">
+                <div className="team-member" title="Click to view full profile of Rafa - Founder & CEO" onClick={() => navigateToTeamMember('founder-ceo')}>
                   <h4>Rafa</h4>
                   <p className="team-role">Founder & Chief Executive Officer (CEO)</p>
                   <p className="team-bio">Chartered Accountant with leadership over trade governance, compliance, and financial risk management.</p>
-                </Link>
-                <Link to="/our-team#trade-intelligence" className="team-member">
+                </div>
+                <div className="team-member" title="Click to view full profile of Muzammil - Chief Trade Intelligence Officer" onClick={() => navigateToTeamMember('trade-intelligence')}>
                   <h4>Muzammil</h4>
                   <p className="team-role">Chief Trade Intelligence Officer</p>
                   <p className="team-bio">Leads global market research, product intelligence, pricing insights, and strategic trade decision support.</p>
-                </Link>
-                <Link to="/our-team#platform-systems" className="team-member">
+                </div>
+                <div className="team-member" title="Click to view full profile of Younus - Chief Platform & Systems Officer" onClick={() => navigateToTeamMember('platform-systems')}>
                   <h4>Younus</h4>
                   <p className="team-role">Chief Platform & Systems Officer</p>
                   <p className="team-bio">Architects and manages the digital platform, trade systems, automation, and technology infrastructure.</p>
-                </Link>
-                <Link to="/our-team#operations" className="team-member">
+                </div>
+                <div className="team-member" title="Click to view full profile of Mudassir - Chief Operations Officer" onClick={() => navigateToTeamMember('operations')}>
                   <h4>Mudassir</h4>
                   <p className="team-role">Chief Operations Officer</p>
                   <p className="team-bio">Oversees end-to-end export operations, procurement coordination, logistics, and execution discipline.</p>
-                </Link>
+                </div>
               </div>
             </div>
           </div>

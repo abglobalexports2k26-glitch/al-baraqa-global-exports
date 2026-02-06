@@ -1,6 +1,20 @@
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './OperationalModel.css'
 
 function OperationalModel() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 50,
+      anchorPlacement: 'top-bottom'
+    })
+  }, [])
+
   return (
     <div className="operational-model-page">
       {/* Hero Section */}
@@ -13,15 +27,15 @@ function OperationalModel() {
           />
         </div>
         <div className="om-hero-content">
-          <h1 className="om-title">Our Operational Model</h1>
-          <p className="om-lead">
+          <h1 className="om-title" data-aos="fade-up">Our Operational Model</h1>
+          <p className="om-lead" data-aos="fade-up" data-aos-delay="100">
             A Structured, Compliance-Driven Export Execution Framework
           </p>
-          <p className="om-intro">
+          <p className="om-intro" data-aos="fade-up" data-aos-delay="200">
             Our export operations follow a clearly defined, end-to-end operating framework designed to ensure quality integrity,
             regulatory compliance, financial discipline, and predictable execution across all products and markets.
           </p>
-          <p className="om-intro">
+          <p className="om-intro" data-aos="fade-up" data-aos-delay="300">
             This operational model is product-agnostic and forms the foundation for all exports undertaken by AlBaraqah Global Exports.
           </p>
         </div>
@@ -31,13 +45,14 @@ function OperationalModel() {
 
       {/* 8-Step Process */}
       <section className="om-section om-process-section">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <h2>End-to-End Export Execution Process</h2>
         </div>
 
         <div className="process-grid">
           {/* Step 1 */}
-          <div className="process-card">
+          {/* Step 1 */}
+          <div className="process-card" data-aos="fade-right" data-aos-delay="100">
             <div className="process-number">1</div>
             <div className="process-content">
               <h3>Source Identification & Direct Procurement</h3>
@@ -47,7 +62,8 @@ function OperationalModel() {
           </div>
 
           {/* Step 2 */}
-          <div className="process-card">
+          {/* Step 2 */}
+          <div className="process-card" data-aos="fade-left" data-aos-delay="100">
             <div className="process-number">2</div>
             <div className="process-content">
               <h3>Quality Assessment & Pre-Shipment Controls</h3>
@@ -57,7 +73,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 3 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-right" data-aos-delay="100">
             <div className="process-number">3</div>
             <div className="process-content">
               <h3>Sorting, Grading & Product Classification</h3>
@@ -67,7 +83,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 4 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-left" data-aos-delay="100">
             <div className="process-number">4</div>
             <div className="process-content">
               <h3>Controlled Handling, Storage & Professional Packaging</h3>
@@ -77,7 +93,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 5 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-right" data-aos-delay="100">
             <div className="process-number">5</div>
             <div className="process-content">
               <h3>Logistics Planning & Containerization</h3>
@@ -87,7 +103,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 6 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-left" data-aos-delay="100">
             <div className="process-number">6</div>
             <div className="process-content">
               <h3>Documentation, Regulatory & Banking Compliance</h3>
@@ -103,7 +119,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 7 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-right" data-aos-delay="100">
             <div className="process-number">7</div>
             <div className="process-content">
               <h3>Shipment Execution & Port Operations</h3>
@@ -113,7 +129,7 @@ function OperationalModel() {
           </div>
 
           {/* Step 8 */}
-          <div className="process-card">
+          <div className="process-card" data-aos="fade-left" data-aos-delay="100">
             <div className="process-number">8</div>
             <div className="process-content">
               <h3>Post-Shipment Monitoring & Trade Closure</h3>
@@ -134,12 +150,12 @@ function OperationalModel() {
           />
         </div>
         <div className="container">
-          <div className="section-header">
+          <div className="section-header" data-aos="fade-up">
             <h2>Governance Embedded at Every Stage</h2>
           </div>
-          <p className="governance-intro">Each stage of our operational model is governed by:</p>
+          <p className="governance-intro" data-aos="fade-up" data-aos-delay="100">Each stage of our operational model is governed by:</p>
           <div className="governance-pillars">
-            <div className="governance-pillar">
+            <div className="governance-pillar" data-aos="zoom-in" data-aos-delay="200">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
@@ -148,20 +164,20 @@ function OperationalModel() {
               </svg>
               <span>Clear Role Ownership</span>
             </div>
-            <div className="governance-pillar">
+            <div className="governance-pillar" data-aos="zoom-in" data-aos-delay="300">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
               </svg>
               <span>Defined Process Controls</span>
             </div>
-            <div className="governance-pillar">
+            <div className="governance-pillar" data-aos="zoom-in" data-aos-delay="400">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
               <span>Compliance Checks</span>
             </div>
-            <div className="governance-pillar">
+            <div className="governance-pillar" data-aos="zoom-in" data-aos-delay="500">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
@@ -176,12 +192,12 @@ function OperationalModel() {
 
       {/* Service Scope Section */}
       <section className="om-section om-scope-section">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <h2>Service Scope & Boundaries</h2>
         </div>
 
         <div className="scope-grid">
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="200">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -194,7 +210,7 @@ function OperationalModel() {
             <p className="scope-note">Activities outside the agreed scope such as destination-side distribution, retail handling, or third-party processing are undertaken only where contractually agreed.</p>
           </div>
 
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="300">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="1" y="3" width="15" height="13"></rect>
@@ -213,7 +229,7 @@ function OperationalModel() {
             <p className="scope-note">All delivery responsibilities are clearly defined prior to execution.</p>
           </div>
 
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="400">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="1" x2="12" y2="23"></line>
@@ -230,7 +246,7 @@ function OperationalModel() {
             <p className="scope-note">Trade execution proceeds only after confirmation of agreed payment terms.</p>
           </div>
 
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="500">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -243,7 +259,7 @@ function OperationalModel() {
             <p className="scope-note">We coordinate with established freight forwarders and shipping lines to ensure compliant and reliable cargo movement across international trade lanes.</p>
           </div>
 
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="600">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -258,7 +274,7 @@ function OperationalModel() {
             <p className="scope-note">This enables smooth customs clearance, banking processes, and downstream coordination.</p>
           </div>
 
-          <div className="scope-card">
+          <div className="scope-card" data-aos="fade-up" data-aos-delay="700">
             <div className="scope-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>

@@ -11,7 +11,7 @@ function Differentiators() {
 
   return (
     <section className="differentiators">
-      <div className="section-header">
+      <div className="section-header" data-aos="fade-up">
         <h2>What Makes us Different</h2>
         <p className="section-subtitle">
           Unlike conventional exporters, our trade operations are managed with a governance-first mindset.

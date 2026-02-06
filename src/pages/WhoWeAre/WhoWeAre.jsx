@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './WhoWeAre.css'
 
 // Import team member images
@@ -207,18 +209,30 @@ function WhoWeAre() {
     }
 
     window.addEventListener('scroll', handleScroll)
+
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 50,
+      anchorPlacement: 'top-bottom'
+    })
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const location = useLocation()
 
-  // Handle hash scrolling on load/navigation
+  // Handle state-based scrolling on navigation (from footer team member clicks)
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '')
-      // Small timeout to ensure DOM is ready and images started loading
+    const scrollTarget = location.state?.scrollTo || (location.hash ? location.hash.replace('#', '') : null)
+
+    if (scrollTarget) {
+      // Small timeout to ensure DOM is ready
       setTimeout(() => {
-        scrollToSection(id)
+        scrollToSection(scrollTarget)
       }, 100)
     }
   }, [location])
@@ -226,7 +240,14 @@ function WhoWeAre() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      const offset = 80
+      // Get navbar height for offset
+      const navbar = document.querySelector('nav')
+      const navHeight = navbar ? navbar.offsetHeight : 0
+
+      // For team-overview, scroll so section is RIGHT at top (below navbar only)
+      // For individual profiles, add a small buffer for better visual positioning
+      const offset = id === 'team-overview' ? navHeight + 20 : navHeight + 30
+
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       window.scrollTo({
         top: elementPosition - offset,
@@ -251,8 +272,8 @@ function WhoWeAre() {
           />
         </div>
         <div className="team-hero-content">
-          <h1 className="team-title">Our Team</h1>
-          <p className="team-subtitle">Precision, accountability, sustainable trade execution</p>
+          <h1 className="team-title" data-aos="fade-up" title="Click to explore our team">Our Team</h1>
+          <p className="team-subtitle" data-aos="fade-up" data-aos-delay="100">Precision, accountability, sustainable trade execution</p>
           {/* <p className="team-tagline">Four roles. One operating rhythm.</p> */}
           <div className="team-hero-cta">
             <p className="team-cta-text">Meet the people driving our vision</p>
@@ -266,11 +287,14 @@ function WhoWeAre() {
       {/* Team Overview Grid */}
       <section id="team-overview" className="team-section team-overview-section">
         <div className="team-overview-grid">
-          {teamMembers.map((member) => (
+          {teamMembers.map((member, index) => (
             <div
               key={member.id}
               className="team-card"
               onClick={() => scrollToSection(member.id)}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              title={`Click to view full profile of ${member.name}`}
             >
               <div className="team-card-image">
                 <img src={member.image} alt={member.name} />
@@ -294,10 +318,10 @@ function WhoWeAre() {
 
       {/* How Our Leadership Works Together */}
       <section className="team-section leadership-rhythm-section">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <h2>How Our Leadership Works Together</h2>
         </div>
-        <div className="leadership-intro">
+        <div className="leadership-intro" data-aos="fade-up" data-aos-delay="100">
           <p className="leadership-statement">A leadership model built for precision, accountability, and sustainable trade execution.</p>
           {/* <p className="leadership-roles">Four roles. One operating rhythm.</p> */}
           <p className="leadership-flow">Decisions move from <span className="flow-highlight">governance</span> → <span className="flow-highlight">intelligence</span> → <span className="flow-highlight">systems</span> → <span className="flow-highlight">execution</span></p>
@@ -318,12 +342,12 @@ function WhoWeAre() {
 
       {/* Detailed Profiles */}
       <section className="team-section detailed-profiles-section">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <h2>Leadership Profiles</h2>
         </div>
 
-        {teamMembers.map((member) => (
-          <div key={member.id} id={member.id} className="profile-detail-new">
+        {teamMembers.map((member, index) => (
+          <div key={member.id} id={member.id} className="profile-detail-new" data-aos="fade-up" data-aos-delay="100">
             {/* Left Column */}
             <div className="profile-left">
               {/* Top Left - Image + Name + Role */}

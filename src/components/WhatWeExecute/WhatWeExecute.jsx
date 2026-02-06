@@ -48,7 +48,7 @@ function WhatWeExecute() {
 
   return (
     <section className="what-we-execute">
-      <div className="section-header">
+      <div className="section-header" data-aos="fade-up">
         <h2>What We Execute</h2>
       </div>
       <div className="services-grid">
