@@ -1,5 +1,6 @@
 .vision-page {
   min-height: 100vh;
+
   .container {
     padding: 0;
     min-height: auto;
@@ -9,8 +10,8 @@
 /* Hero Section */
 .vision-hero {
   position: relative;
-  padding: 2rem;
-  min-height: 600px;
+  /* padding: 2rem; */
+  min-height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,9 +135,11 @@
 .vision-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
   gap: 1rem;
   margin-bottom: 3rem;
 }
@@ -431,7 +434,9 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .vision-hero {
-    padding: 4rem 1rem 3rem;
+    padding: 6rem 1rem 3rem;
+    min-height: 100dvh;
+    height: auto;
   }
 
   .vision-title {

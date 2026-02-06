@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 50%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(201, 162, 39, 0.15) 0%, transparent 50%);
   pointer-events: none;
@@ -131,6 +131,12 @@
 }
 
 /* Team Members */
+.footer-heading-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .team-members {
   display: flex;
   gap: 1.5rem;
@@ -142,6 +148,13 @@
   background: rgba(201, 162, 39, 0.08);
   border: 1px solid rgba(201, 162, 39, 0.2);
   transition: all 0.3s ease;
+  display: block;
+  /* Ensure it behaves as a block link */
+  text-decoration: none;
+  /* Remove default link underline */
+  color: inherit;
+  /* Inherit color */
+  cursor: pointer;
 }
 
 .team-member:hover {

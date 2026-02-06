@@ -113,9 +113,11 @@
   .brand-name {
     font-size: 1rem;
   }
+
   .brand-name-image {
     height: 1.8rem;
   }
+
   .logo-image {
     height: 3rem;
   }
@@ -150,7 +152,7 @@
 
 .nav-link {
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
   color: #0b2c4d;
   text-decoration: none;
   background: none;
@@ -160,13 +162,30 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a227, #ddb93d);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: #0f4c5c;
-  text-shadow: none;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 /* Dropdown */
@@ -203,8 +222,11 @@
 }
 
 .dropdown-item:hover {
-  background-color: var(--hover-overlay);
-  color: var(--primary-color);
+  background-color: rgba(201, 162, 39, 0.08);
+  /* Gold tint */
+  color: #0f4c5c;
+  padding-left: 1.25rem;
+  /* Slide effect */
 }
 
 /* Desktop Actions */
@@ -289,11 +311,12 @@
 /* Mobile Navigation */
 .mobile-nav {
   display: block;
-  background: linear-gradient(135deg, #0b2c4d 0%, #071a2e 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   animation: slideDown 0.3s ease-out;
   overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 @keyframes slideDown {
@@ -313,7 +336,7 @@
 .mobile-nav-link {
   display: block;
   padding: 0.75rem 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #0b2c4d;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -363,8 +386,9 @@
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: rgba(11, 44, 77, 0.05);
+  /* Subtle dark hover */
+  color: #0f4c5c;
 }
 
 .mobile-dropdown {
@@ -375,12 +399,15 @@
 .mobile-dropdown-items {
   padding-left: 1rem;
   margin-top: 0.5rem;
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+  margin-left: 1rem;
 }
 
 .mobile-dropdown-item {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--text-secondary);
+  color: #555;
+  /* Default text color */
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s ease;
@@ -388,6 +415,8 @@
 
 .mobile-dropdown-item:hover {
   color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
 }
 
 .mobile-cta-button {

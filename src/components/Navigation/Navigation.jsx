@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './Navigation.css'
 import falconLogo from '../../assets/images/only_falcon_logo.png'
 import brandName from '../../assets/images/brand_name.png'
@@ -8,13 +8,26 @@ function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
+
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsProductsOpen(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const scrollToTop = () => {
@@ -44,7 +57,7 @@ function Navigation() {
             <NavLink to="/our-team" className="nav-link" onClick={scrollToTop}>Our Team</NavLink>
 
             {/* Products Dropdown */}
-            <div className="dropdown">
+            <div className="dropdown" ref={dropdownRef}>
               <button
                 className="nav-link dropdown-toggle"
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
