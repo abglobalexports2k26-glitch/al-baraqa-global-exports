@@ -1,8 +1,10 @@
 /* App styles */
 
 .container {
+  width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  padding-top: 4rem;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+  overflow-x: clip;
 }
