@@ -419,11 +419,11 @@
     border-radius: 1rem;
     border-left: 4px solid #c9a227;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .faq-card:hover {
     transform: translateX(8px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .faq-card h3 {

@@ -149,7 +149,7 @@ function OperationalModel() {
             className="section-background-image"
           />
         </div>
-        <div className="container">
+        <div>
           <div className="section-header" data-aos="fade-up">
             <h2>Governance Embedded at Every Stage</h2>
           </div>
