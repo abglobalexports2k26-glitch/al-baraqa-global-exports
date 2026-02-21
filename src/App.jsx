@@ -9,6 +9,9 @@ import WhatWeExport from './pages/WhatWeExport'
 import OperationalModel from './pages/OperationalModel'
 import MarketIntelligence from './pages/MarketIntelligence'
 import Contact from './pages/Contact'
+import PrivacyPolicy from './pages/Legal/PrivacyPolicy'
+import TermsOfService from './pages/Legal/TermsOfService'
+import TradeTerms from './pages/Legal/TradeTerms'
 import './App.css'
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
           <Route path="/operational-model" element={<OperationalModel />} />
           <Route path="/market-intelligence" element={<MarketIntelligence />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/trade-terms" element={<TradeTerms />} />
         </Routes>
       </div>
       <Footer />

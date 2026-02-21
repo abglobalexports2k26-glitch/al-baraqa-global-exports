@@ -197,7 +197,9 @@ function WhoWeAre() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = teamMembers.map(member => document.getElementById(member.id))
-      const scrollPosition = window.scrollY + 150
+      const navbar = document.querySelector('nav')
+      const navHeight = navbar ? navbar.offsetHeight : 0
+      const scrollPosition = window.scrollY + navHeight + 150
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i]
@@ -232,25 +234,36 @@ function WhoWeAre() {
     if (scrollTarget) {
       // Small timeout to ensure DOM is ready
       setTimeout(() => {
-        scrollToSection(scrollTarget)
+        scrollToMemberFromFooter(scrollTarget)
       }, 100)
     }
   }, [location])
 
+  // Scroll used by scroll-indicator and team card clicks (within the page)
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      // Get navbar height for offset
       const navbar = document.querySelector('nav')
-      const navHeight = navbar ? navbar.offsetHeight : 0
-
-      // For team-overview, scroll so section is RIGHT at top (below navbar only)
-      // For individual profiles, add a small buffer for better visual positioning
-      const offset = id === 'team-overview' ? navHeight + 20 : navHeight + 30
+      const navHeight = navbar ? navbar.offsetHeight + 20 : 0
 
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       window.scrollTo({
-        top: elementPosition - offset,
+        top: elementPosition - navHeight,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  // Scroll used when navigating from footer team member clicks
+  const scrollToMemberFromFooter = (id) => {
+    const element = document.getElementById(id)
+    if (element) {
+      const navbar = document.querySelector('nav')
+      const navHeight = navbar ? navbar.offsetHeight + 140 : 0
+
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      window.scrollTo({
+        top: elementPosition - navHeight,
         behavior: 'smooth'
       })
     }
@@ -291,7 +304,7 @@ function WhoWeAre() {
             <div
               key={member.id}
               className="team-card"
-              onClick={() => scrollToSection(member.id)}
+              onClick={() => scrollToMemberFromFooter(member.id)}
               data-aos="fade-up"
               data-aos-delay={index * 100}
               title={`Click to view full profile of ${member.name}`}

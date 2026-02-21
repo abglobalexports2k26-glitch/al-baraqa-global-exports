@@ -11,6 +11,7 @@
     "ngrok": "C:\\Users\\yshaik\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ngrok.Ngrok_Microsoft.Winget.Source_8wekyb3d8bbwe\\ngrok.exe http 1143 --log=stdout"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "aos": "^2.3.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
