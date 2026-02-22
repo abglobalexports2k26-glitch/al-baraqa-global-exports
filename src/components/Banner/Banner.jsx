@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Banner.css'
-import logisticsBg from '../../assets/images/global_bg.jpeg'
+import logisticsBg from '../../assets/images/home_page_bg.jpeg'
 
 function Banner() {
   const tags = [

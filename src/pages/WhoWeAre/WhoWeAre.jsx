@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './WhoWeAre.css'
+import ourteamBg from '../../assets/images/ourteam_bg.jpeg'
 
 // Import team member images
 import RafaImg from '../../assets/images/Rafa.jpg'
@@ -279,7 +280,7 @@ function WhoWeAre() {
       <section className="team-hero">
         <div className="team-hero-background">
           <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&q=80"
+            src={ourteamBg}
             alt="Professional Team"
             className="team-hero-image"
           />

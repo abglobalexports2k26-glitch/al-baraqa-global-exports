@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Vision.css'
-
+import ourvisionBg from '../../assets/images/ourvision_page_bg.jpeg'
 function Vision() {
   useEffect(() => {
     AOS.init({
@@ -21,7 +21,7 @@ function Vision() {
       <section className="vision-hero">
         <div className="vision-hero-background">
           <img
-            src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&h=800&fit=crop&q=80"
+            src={ourvisionBg}
             alt="Global Shipping and Logistics"
             className="vision-hero-image"
           />
