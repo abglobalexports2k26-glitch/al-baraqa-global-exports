@@ -1,5 +1,5 @@
 /* ================================================================
-   Glass Navigation — Glassmorphic sticky navbar
+   Glass Navigation  Glassmorphic sticky navbar
    ================================================================ */
 
 .site-header {
@@ -30,7 +30,7 @@
   padding: 8px 75px 8px 80px;
 }
 
-/* Radial gradient overlays — green left, gold right */
+/* Radial gradient overlays  green left, gold right */
 .glass-nav::before {
   content: "";
   position: absolute;
@@ -156,7 +156,7 @@
   }
 }
 
-/* Mobile — hamburger kicks in */
+/* Mobile  hamburger kicks in */
 @media (max-width: 980px) {
   .glass-nav {
     padding: 10px 20px;

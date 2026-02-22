@@ -76,6 +76,41 @@
   color: #d0e7f0;
 }
 
+/* Leadership Callout */
+.leadership-callout {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.75rem 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.callout-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #c9a227, #ddb93d);
+}
+
+.leadership-callout p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.leadership-callout strong {
+  color: #ffd700;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
 
 /* Common Section Styles */
 .vision-section {

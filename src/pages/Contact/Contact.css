@@ -23,7 +23,7 @@
 }
 
 /* ========================================
-   LEFT — Contact Details
+   LEFT  Contact Details
    ======================================== */
 .contact-details {
   background: var(--card-bg);
@@ -63,7 +63,7 @@
 }
 
 /* ========================================
-   RIGHT — Contact Form
+   RIGHT  Contact Form
    ======================================== */
 .contact-form {
   background: var(--card-bg);
@@ -242,7 +242,7 @@
 }
 
 /* ========================================
-   RESPONSIVE — Tablet (≤ 768px)
+   RESPONSIVE  Tablet (≤ 768px)
    ======================================== */
 @media (max-width: 768px) {
   .contact-container {
@@ -266,7 +266,7 @@
 }
 
 /* ========================================
-   RESPONSIVE — Small mobile (≤ 480px)
+   RESPONSIVE  Small mobile (≤ 480px)
    ======================================== */
 @media (max-width: 480px) {
   .contact-container {

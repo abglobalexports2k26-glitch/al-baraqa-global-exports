@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * REFERENCE FILE — Al Baraqah Global Exports Glassmorphic Navbar
+ * REFERENCE FILE  Al Baraqah Global Exports Glassmorphic Navbar
  * ============================================================
  * This file contains the COMPLETE navbar implementation
  * (React JSX + full CSS) from the live site, copied here
@@ -30,11 +30,11 @@ import falconLogo from '../assets/images/only_falcon_logo.png'
    ================================================================ */
 
 /* ================================================================
-   FULL NAVBAR CSS (Navigation.css) — embedded as a style tag
+   FULL NAVBAR CSS (Navigation.css)  embedded as a style tag
    ================================================================ */
 const navbarCSS = `
 /* ================================================================
-   Glass Navigation — matching homepage_design.html
+   Glass Navigation  matching homepage_design.html
    ================================================================ */
 
 .site-header {
@@ -58,7 +58,7 @@ const navbarCSS = `
   padding: 18px 28px;
 }
 
-/* Radial gradient overlays — green left, gold right */
+/* Radial gradient overlays  green left, gold right */
 .glass-nav::before {
   content: "";
   position: absolute;

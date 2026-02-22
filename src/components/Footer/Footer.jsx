@@ -11,7 +11,7 @@ function Footer() {
 
   const navigateToTeamMember = (memberId) => {
     if (location.pathname === '/our-team') {
-      // Already on team page — scroll directly with footer offset
+      // Already on team page  scroll directly with footer offset
       const element = document.getElementById(memberId)
       if (element) {
         const navbar = document.querySelector('nav')

@@ -52,7 +52,7 @@ function TermsOfService() {
             <div className="legal-section" data-aos="fade-up">
                 <h2>4. Intellectual Property</h2>
                 <p>
-                    All content on this website — including but not limited to text, graphics, logos, brand name, images, design elements, and page layout — is the intellectual property of Al Baraqah Global Exports and is protected under applicable copyright and trademark laws.
+                    All content on this website  including but not limited to text, graphics, logos, brand name, images, design elements, and page layout  is the intellectual property of Al Baraqah Global Exports and is protected under applicable copyright and trademark laws.
                 </p>
                 <ul>
                     <li>You may not reproduce, distribute, modify, or create derivative works from our content without prior written consent</li>

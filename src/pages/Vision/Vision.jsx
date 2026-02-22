@@ -32,8 +32,14 @@ function Vision() {
             We envision building a globally respected export enterprise from India that is driven not by trading instincts alone,
             but by professional governance, financial discipline, engineering precision, and international compliance.
           </p>
-          <p className="vision-intro" data-aos="fade-up" data-aos-delay="200">
-            <b>Our company is led by Chartered Accountants and Engineers</b>, bringing together commercial intelligence with operational rigour.
+          <div className="leadership-callout" data-aos="zoom-in" data-aos-delay="200">
+            <div className="callout-accent"></div>
+            <p>
+              <strong>Our company is led by Chartered Accountants and Engineers</strong> bringing together
+              commercial intelligence with operational rigour.
+            </p>
+          </div>
+          <p className="vision-intro" data-aos="fade-up" data-aos-delay="300">
             Our vision is to design an export organization where global trade is executed with the same level of structure, transparency,
             and analytical discipline that international buyers expect from professionally governed institutions.
           </p>

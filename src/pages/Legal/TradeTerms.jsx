@@ -41,7 +41,7 @@ function TradeTerms() {
                 <h2>3. Pricing & Payment</h2>
                 <ul>
                     <li>All pricing is quoted in USD or INR as mutually agreed, and is subject to prevailing market rates at the time of order confirmation</li>
-                    <li>Pricing includes product cost and may or may not include packaging, logistics, and customs charges — as specified in each quotation</li>
+                    <li>Pricing includes product cost and may or may not include packaging, logistics, and customs charges  as specified in each quotation</li>
                     <li>Payment terms are negotiated on a per-transaction basis and will be clearly stated in the commercial invoice or proforma invoice</li>
                     <li>Acceptable payment modes include wire transfer (TT), letter of credit (L/C), and other mutually agreed methods</li>
                     <li>Advance payment or confirmed L/C may be required for first-time buyers</li>
