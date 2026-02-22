@@ -334,13 +334,13 @@
 .leadership-pillars-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .leadership-pillar {
-    padding: 2rem;
+    padding: 1.3rem;
     background: white;
     border-radius: 1rem;
     border: 1px solid rgba(26, 95, 60, 0.08);
