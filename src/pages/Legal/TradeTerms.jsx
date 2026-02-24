@@ -19,7 +19,7 @@ function TradeTerms() {
             <div className="legal-section" data-aos="fade-up" data-aos-delay="150">
                 <h2>1. Scope of Trade</h2>
                 <p>
-                    Al Baraqah Global Exports operates as an export trading company based in India, specialising in sourcing and exporting agricultural produce, spices, agro commodities, and customized products to international buyers.
+                    Al Baraqah Global Exports operates as an export trading enterprises based in India, specialising in sourcing and exporting agricultural produce, spices, agro commodities, and customized products to international buyers.
                 </p>
                 <p>
                     These Trade Terms apply to all commercial engagements, trade inquiries, quotations, and export transactions initiated through our website or direct communication channels.

@@ -35,7 +35,7 @@ function Vision() {
           <div className="leadership-callout" data-aos="zoom-in" data-aos-delay="200">
             <div className="callout-accent"></div>
             <p>
-              <strong>Our company is led by Chartered Accountants and Engineers</strong> bringing together
+              <strong>Our enterprises is led by Chartered Accountants and Engineers</strong> bringing together
               commercial intelligence with operational rigour.
             </p>
           </div>
@@ -61,7 +61,7 @@ function Vision() {
             engineering, and compliance shape every shipment.
           </p>
           <p className="statement-secondary" data-aos="fade-left" data-aos-delay="300">
-            A company recognized not for shipment volumes, but for the precision, transparency, and reliability of its operations.
+            An enterprises recognized not for shipment volumes, but for the precision, transparency, and reliability of its operations.
           </p>
         </div>
       </section>
