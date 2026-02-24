@@ -1,13 +1,47 @@
 {
-  "name": "exports",
+  "name": "al-baraqa-global-exports",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Official website of Al Baraqah Global Exports — a professionally governed export enterprise from India specialising in agricultural produce, spices, agro commodities, and customized products for international buyers.",
+  "author": "Al Baraqah Global Exports <abglobalexports2k26@gmail.com>",
+  "homepage": "http://albaraqahglobalexports.com",
+  "license": "UNLICENSED",
   "type": "module",
+  "keywords": [
+    "al-baraqah",
+    "global-exports",
+    "india-exports",
+    "agricultural-exports",
+    "spices",
+    "agro-commodities",
+    "international-trade",
+    "export-enterprise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albaraqahexports/al-baraqa-global-exports.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
     "ngrok": "C:\\Users\\yshaik\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ngrok.Ngrok_Microsoft.Winget.Source_8wekyb3d8bbwe\\ngrok.exe http 1143 --log=stdout"
   },
   "dependencies": {
@@ -26,6 +60,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "terser": "^5.46.0",
     "vite": "^7.2.4"
   }
 }
