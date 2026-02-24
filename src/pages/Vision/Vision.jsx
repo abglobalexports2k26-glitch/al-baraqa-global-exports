@@ -35,7 +35,7 @@ function Vision() {
           <div className="leadership-callout" data-aos="zoom-in" data-aos-delay="200">
             <div className="callout-accent"></div>
             <p>
-              <strong>Our enterprises is led by Chartered Accountants and Engineers</strong> bringing together
+              <strong>Our Enterprise is led by Chartered Accountants and Engineers</strong> bringing together
               commercial intelligence with operational rigour.
             </p>
           </div>
