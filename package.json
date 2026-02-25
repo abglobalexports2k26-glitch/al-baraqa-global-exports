@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Official website of Al Baraqah Global Exports — a professionally governed export enterprise from India specialising in agricultural produce, spices, agro commodities, and customized products for international buyers.",
   "author": "Al Baraqah Global Exports <abglobalexports2k26@gmail.com>",
-  "homepage": "http://albaraqahglobalexports.com",
+  "homepage": "https://albaraqahglobalexports.com",
   "license": "UNLICENSED",
   "type": "module",
   "keywords": [
@@ -60,6 +60,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.5",
     "terser": "^5.46.0",
     "vite": "^7.2.4"
   }
