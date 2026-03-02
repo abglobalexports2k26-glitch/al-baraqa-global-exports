@@ -7,6 +7,7 @@ import Differentiators from '../../components/Differentiators'
 import WhatWeExecute from '../../components/WhatWeExecute'
 import Governance from '../../components/Governance'
 import CTASection from '../../components/CTASection'
+import ProductCategories from '../../components/ProductCategories'
 import './Home.css'
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
   return (
     <div className="home-page">
       <Banner />
+      <ProductCategories />
       <div>
         <WhoWeAre />
       </div>

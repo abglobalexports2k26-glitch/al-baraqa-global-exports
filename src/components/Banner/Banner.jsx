@@ -35,8 +35,8 @@ function Banner() {
             <Link to="/contact" className="btn-primary">
               Initiate Trade Discussions
             </Link>
-            <Link to="/operational-model" className="btn-secondary">
-              View our Capabilities
+            <Link to="/what-we-export" className="btn-secondary">
+              Our Products Portfolio
             </Link>
           </div>
         </div>

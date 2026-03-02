@@ -1,0 +1,238 @@
+/* ========================================
+   PRODUCT CATEGORIES — Browse by Category
+   ======================================== */
+
+.pc-section {
+    padding: 5rem 2rem;
+    background: var(--bg-primary);
+}
+
+.pc-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.pc-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+}
+
+.pc-eyebrow::before,
+.pc-eyebrow::after {
+    content: '';
+    width: 30px;
+    height: 1.5px;
+    background: var(--gold);
+    opacity: 0.4;
+}
+
+.pc-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.pc-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0.6rem auto 0;
+    border-radius: 4px;
+}
+
+/* Grid */
+.pc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Card */
+.pc-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 340px;
+    text-decoration: none;
+    display: block;
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pc-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.pc-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pc-card:hover .pc-card-img {
+    transform: scale(1.08);
+}
+
+/* Gradient Overlay */
+.pc-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(10, 31, 20, 0.92) 0%,
+            rgba(10, 31, 20, 0.65) 40%,
+            rgba(10, 31, 20, 0.2) 70%,
+            rgba(10, 31, 20, 0.05) 100%);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+
+.pc-card:hover .pc-card-overlay {
+    background: linear-gradient(to top,
+            rgba(10, 31, 20, 0.95) 0%,
+            rgba(10, 31, 20, 0.7) 40%,
+            rgba(10, 31, 20, 0.25) 70%,
+            rgba(10, 31, 20, 0.08) 100%);
+}
+
+/* Card Content */
+.pc-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2.2rem;
+    z-index: 2;
+}
+
+.pc-card-count {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    border-radius: 50px;
+    background: rgba(201, 162, 39, 0.15);
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.7rem;
+}
+
+.pc-card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+}
+
+.pc-card-desc {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.55;
+    margin: 0 0 1.2rem;
+    max-width: 380px;
+}
+
+.pc-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.pc-card-link svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.pc-card:hover .pc-card-link {
+    color: var(--gold);
+}
+
+.pc-card:hover .pc-card-link svg {
+    transform: translateX(4px);
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .pc-section {
+        padding: 3.5rem 1rem;
+    }
+
+    .pc-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pc-card {
+        height: 280px;
+    }
+
+    .pc-title {
+        font-size: 1.7rem;
+    }
+
+    .pc-card-title {
+        font-size: 1.5rem;
+    }
+
+    .pc-card-content {
+        padding: 1.5rem 1.6rem;
+    }
+
+    .pc-card-desc {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pc-card {
+        height: 240px;
+    }
+
+    .pc-card-title {
+        font-size: 1.3rem;
+    }
+
+    .pc-card-desc {
+        font-size: 0.78rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .pc-card-content {
+        padding: 1.2rem 1.3rem;
+    }
+}
