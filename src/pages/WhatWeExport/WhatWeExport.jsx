@@ -5,11 +5,11 @@ import 'aos/dist/aos.css'
 import './WhatWeExport.css'
 
 // Product images
-import gunturImg from '../../assets/images/products/product_img_3.jpeg'
-import byadgiImg from '../../assets/images/products/product_img_2.jpeg'
-import tejaImg from '../../assets/images/products/product_img_1.jpeg'
-import basmatiImg from '../../assets/images/products/product_img_6.jpeg'
-import sonaImg from '../../assets/images/products/product_img_5.jpeg'
+import gunturImg from '../../assets/images/products/guntur_sannam_chilli.jpeg'
+import byadgiImg from '../../assets/images/products/byadgi_red_chilli.jpeg'
+import tejaImg from '../../assets/images/products/Teja_mirchi.jpeg'
+import basmatiImg from '../../assets/images/products/traditional_basmati_rice.jpeg'
+import sonaImg from '../../assets/images/products/sona_masoori_rice.jpeg'
 
 const products = [
   {

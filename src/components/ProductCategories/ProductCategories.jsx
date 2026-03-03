@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import './ProductCategories.css'
 
-import chilliImg from '../../assets/images/products/product_img_3.jpeg'
-import riceImg from '../../assets/images/products/product_img_6.jpeg'
+import chilliImg from '../../assets/images/products/chilli_cato.jpeg'
+import riceImg from '../../assets/images/products/rice_cato.jpeg'
 
 const categories = [
     {
