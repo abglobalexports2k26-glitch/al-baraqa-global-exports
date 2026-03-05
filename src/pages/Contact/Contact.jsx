@@ -93,7 +93,7 @@ function Contact() {
             </div>
             <div className="info-item">
               <h3>Email</h3>
-              <p>abglobalexports2k26@gmail.com <span style={{ fontSize: '0.8em', opacity: 0.7 }}>(Primary)</span><br />albaraqah.exports@gmail.com <span style={{ fontSize: '0.8em', opacity: 0.7 }}>(Secondary)</span></p>
+              <p> rafa@abqglobalexports.com <span style={{ fontSize: '0.8em', opacity: 0.7 }}>(Primary)</span><br /> abglobalexports2k26@gmail.com <span style={{ fontSize: '0.8em', opacity: 0.7 }}>(Secondary)</span></p>
             </div>
             <div className="info-item">
               <h3>Phone</h3>
